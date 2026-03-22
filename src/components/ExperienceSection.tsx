@@ -14,13 +14,13 @@ const roles: Role[] = [
     company: "Edelweiss Global Markets",
     period: "Dec 2022 — Present",
     bullets: [
-      "Architected two real-time algo trading platforms using React, AG Grid, and micro-frontend architecture",
+      "Architected two real-time algo trading platforms using Angular, React, Node.js, and micro-frontend architecture",
       "Designed low-code framework enabling traders to build strategies without coding, cutting development effort by 40%",
       "Led migration from legacy systems to React + TypeScript stack, improving load times by 70%",
-      "Implemented WebSocket-driven real-time order management with sub-second update latency",
+      "Implemented Kafka & WebSocket-driven real-time order management with sub-second update latency",
       "Mentored team of 5 frontend engineers and established coding standards and review processes",
     ],
-    tags: ["React", "TypeScript", "AG Grid", "Micro-Frontends", "WebSocket", "Redux"],
+    tags: ["Angular", "React", "TypeScript", "Node.js", "Micro-Frontends", "Kafka", "WebSocket", "Redux"],
   },
   {
     title: "Senior Software Engineer",
@@ -28,11 +28,11 @@ const roles: Role[] = [
     period: "Jun 2020 — Dec 2022",
     bullets: [
       "Developed SaaS platforms for US-based clients focusing on healthcare and logistics domains",
-      "Built real-time dashboards and complex form systems using React and Node.js",
+      "Built real-time dashboards and complex form systems using Angular and Node.js",
       "Introduced component-driven architecture with Storybook, improving UI consistency across teams",
       "Integrated REST and GraphQL APIs with optimized caching strategies",
     ],
-    tags: ["React", "Node.js", "GraphQL", "Storybook", "Material UI"],
+    tags: ["Angular", "Node.js", "GraphQL", "Storybook", "Material UI"],
   },
   {
     title: "Systems Engineer",
