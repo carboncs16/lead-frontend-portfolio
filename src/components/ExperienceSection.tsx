@@ -12,7 +12,7 @@ const roles: Role[] = [
   {
     title: "AVP, Software Development",
     company: "Edelweiss Global Markets",
-    period: "Dec 2022 — Present",
+    period: "Jul 2022 — Present",
     bullets: [
       "Architected two real-time algo trading platforms using Angular, React, Node.js, and micro-frontend architecture",
       "Designed low-code framework enabling traders to build strategies without coding, cutting development effort by 40%",
@@ -25,7 +25,7 @@ const roles: Role[] = [
   {
     title: "Senior Software Engineer",
     company: "Mindfire Solutions",
-    period: "Jun 2020 — Dec 2022",
+    period: "March 2020 — Jul 2022",
     bullets: [
       "Developed SaaS platforms for US-based clients focusing on healthcare and logistics domains",
       "Built real-time dashboards and complex form systems using Angular and Node.js",
@@ -37,7 +37,7 @@ const roles: Role[] = [
   {
     title: "Systems Engineer",
     company: "Infosys Ltd.",
-    period: "Jan 2018 — Jun 2020",
+    period: "May 2018 — Feb 2020",
     bullets: [
       "Developed enterprise web applications for banking and insurance clients",
       "Built responsive UIs with Angular and React, handling complex business workflows",
