@@ -21,7 +21,7 @@ export default function EducationSection() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-1">
-                B.Tech in Computer Science & Engineering
+                B.Tech in Applied Electronics and Instrumentation Engineering
               </h3>
               <p className="font-mono text-sm text-primary mb-2">
                 Silicon Institute of Technology, Bhubaneswar
@@ -29,7 +29,7 @@ export default function EducationSection() {
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <span>2014 — 2018</span>
                 <span className="w-px h-3 bg-border" />
-                <span>CGPA: 7.53</span>
+                <span>CGPA: 8.31</span>
               </div>
             </div>
           </div>

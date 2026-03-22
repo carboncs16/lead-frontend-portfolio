@@ -32,23 +32,23 @@ export default function ContactSection() {
 
             <div className="space-y-4">
               <a
-                href="mailto:punyapattnaik19@gmail.com"
+                href="mailto:punyapurba16@gmail.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
               >
                 <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
                   <Mail size={16} className="text-primary" />
                 </div>
-                punyapattnaik19@gmail.com
+                punyapurba16@gmail.com
               </a>
 
               <a
-                href="tel:+918093837937"
+                href="tel:+918763932785"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
               >
                 <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
                   <Phone size={16} className="text-primary" />
                 </div>
-                +91 8093837937
+                +91 8763932785
               </a>
             </div>
           </div>
