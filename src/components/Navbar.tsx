@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
 
 const links = [
   { label: "About", href: "#about" },
@@ -12,12 +13,22 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { theme, toggleTheme, mounted } = useTheme();
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Update isDark based on actual theme
+  useEffect(() => {
+    if (mounted) {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      setIsDark(isDarkMode);
+    }
+  }, [theme, mounted]);
 
   return (
     <nav
@@ -28,7 +39,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#hero" className="font-mono text-lg font-bold text-primary tracking-tight">
+        <a href="#hero" className="font-mono text-lg font-bold text-primary tracking-tight cursor-pointer">
           {"<PP />"}
         </a>
 
@@ -38,21 +49,33 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 cursor-pointer"
             >
               {l.label}
             </a>
           ))}
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-muted-foreground hover:text-primary active:scale-95 transition-all"
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Theme toggle + Mobile menu */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-all duration-200 cursor-pointer"
+            aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+            disabled={!mounted}
+          >
+            {mounted && (isDark ? <Sun size={20} /> : <Moon size={20} />)}
+          </button>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden p-2 text-muted-foreground hover:text-primary active:scale-95 transition-all cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -63,7 +86,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="block text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
             >
               {l.label}
             </a>

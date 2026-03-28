@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -44,6 +44,94 @@
     --sidebar-accent-foreground: 210 20% 85%;
     --sidebar-border: 220 14% 16%;
     --sidebar-ring: 205 100% 55%;
+
+    color-scheme: dark;
+  }
+
+  /* Light mode using class selector */
+  html.light {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 13%;
+
+    --card: 0 0% 97%;
+    --card-foreground: 220 13% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 13%;
+
+    --primary: 205 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 220 13% 13%;
+
+    --muted: 220 13% 91%;
+    --muted-foreground: 215 11% 43%;
+
+    --accent: 205 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 205 100% 45%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 13% 13%;
+    --sidebar-primary: 205 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 91%;
+    --sidebar-accent-foreground: 220 13% 13%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 205 100% 45%;
+
+    color-scheme: light;
+  }
+
+  /* System preference fallback for initial load */
+  @media (prefers-color-scheme: light) {
+    :root:not(.light):not(.dark) {
+      --background: 0 0% 100%;
+      --foreground: 220 13% 13%;
+
+      --card: 0 0% 97%;
+      --card-foreground: 220 13% 13%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 220 13% 13%;
+
+      --primary: 205 100% 45%;
+      --primary-foreground: 0 0% 100%;
+
+      --secondary: 220 13% 91%;
+      --secondary-foreground: 220 13% 13%;
+
+      --muted: 220 13% 91%;
+      --muted-foreground: 215 11% 43%;
+
+      --accent: 205 100% 45%;
+      --accent-foreground: 0 0% 100%;
+
+      --destructive: 0 72% 51%;
+      --destructive-foreground: 0 0% 100%;
+
+      --border: 220 13% 91%;
+      --input: 220 13% 91%;
+      --ring: 205 100% 45%;
+
+      --sidebar-background: 0 0% 100%;
+      --sidebar-foreground: 220 13% 13%;
+      --sidebar-primary: 205 100% 45%;
+      --sidebar-primary-foreground: 0 0% 100%;
+      --sidebar-accent: 220 13% 91%;
+      --sidebar-accent-foreground: 220 13% 13%;
+      --sidebar-border: 220 13% 91%;
+      --sidebar-ring: 205 100% 45%;
+
+      color-scheme: light;
+    }
   }
 }
 
@@ -54,7 +142,13 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
   }
 
   html {
@@ -101,4 +195,108 @@
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
+}
+
+/* Standardized hover patterns */
+.hover-card {
+  @apply border-border transition-all duration-300 cursor-pointer hover:border-primary hover:shadow-lg hover:shadow-primary/10;
+}
+
+.hover-link {
+  @apply transition-colors duration-200 cursor-pointer hover:text-primary;
+}
+
+.hover-badge {
+  @apply transition-colors duration-200 cursor-pointer hover:bg-primary/15 hover:text-primary;
+}
+
+.hover-button-primary {
+  @apply transition-all duration-200 cursor-pointer hover:bg-primary/90 active:scale-[0.97];
+}
+
+.hover-button-secondary {
+  @apply transition-all duration-200 cursor-pointer hover:border-primary hover:bg-primary/5 active:scale-[0.97];
+}
+
+/* Form field utilities */
+.form-input {
+  @apply w-full bg-card border-2 border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.form-input-error {
+  @apply border-destructive focus:ring-destructive/40;
+}
+
+.form-input-valid {
+  @apply border-green-500/50 focus:ring-green-500/40;
+}
+
+/* Smooth animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Success checkmark */
+@keyframes checkmark {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-checkmark {
+  animation: checkmark 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
 }

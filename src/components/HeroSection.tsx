@@ -58,13 +58,13 @@ export default function HeroSection() {
         <div className="flex items-center justify-center gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-medium text-sm rounded-md hover:bg-primary/90 active:scale-[0.97] transition-all duration-200 glow"
+            className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-medium text-sm rounded-md hover:bg-primary/90 active:scale-[0.97] transition-all duration-200 glow cursor-pointer"
           >
             Get in Touch
           </a>
           <a
             href="#about"
-            className="inline-flex items-center px-6 py-3 border border-border text-foreground font-medium text-sm rounded-md hover:bg-secondary active:scale-[0.97] transition-all duration-200"
+            className="inline-flex items-center px-6 py-3 border border-primary/20 text-foreground font-medium text-sm rounded-md hover:border-primary hover:bg-primary/5 active:scale-[0.97] transition-all duration-200 cursor-pointer"
           >
             Learn More
           </a>
@@ -72,7 +72,7 @@ export default function HeroSection() {
 
         <a
           href="#about"
-          className="mt-16 inline-block text-muted-foreground hover:text-primary transition-colors animate-bounce"
+          className="mt-16 inline-block text-muted-foreground hover:text-primary transition-colors animate-bounce cursor-pointer"
           aria-label="Scroll down"
         >
           <ArrowDown size={20} />

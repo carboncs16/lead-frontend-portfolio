@@ -70,7 +70,7 @@ export default function ExperienceSection() {
                 {/* Dot */}
                 <div className="absolute left-0 top-2 w-[15px] h-[15px] rounded-full border-2 border-primary bg-background hidden sm:block" />
 
-                <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+                <div className="bg-card border border-border rounded-lg p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 cursor-pointer">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                     <div>
                       <h3 className="text-lg font-semibold text-foreground">

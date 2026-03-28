@@ -39,7 +39,7 @@ export default function AboutSection() {
           {stats.map((s, i) => (
             <div
               key={s.label}
-              className="reveal group relative bg-card border border-border rounded-lg p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+              className="reveal group relative bg-card border border-border rounded-lg p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 cursor-pointer"
             >
               <s.icon
                 size={20}

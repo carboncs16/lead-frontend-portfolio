@@ -14,7 +14,7 @@ export default function EducationSection() {
           Academic Background
         </h2>
 
-        <div className="reveal bg-card border border-border rounded-lg p-6 sm:p-8 max-w-xl hover:border-primary/20 transition-all duration-300">
+        <div className="reveal bg-card border border-border rounded-lg p-6 sm:p-8 max-w-xl hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 cursor-pointer">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
               <GraduationCap size={18} className="text-primary" />

@@ -36,7 +36,7 @@ export default function AchievementsSection() {
           {achievements.map((a, i) => (
             <div
               key={i}
-              className="reveal group bg-card border border-border rounded-lg p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+              className="reveal group bg-card border border-border rounded-lg p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 cursor-pointer"
             >
               <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
                 <a.icon size={18} className="text-primary" />

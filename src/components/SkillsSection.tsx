@@ -60,7 +60,7 @@ export default function SkillsSection() {
           {categories.map((cat, i) => (
             <div
               key={cat.title}
-              className="reveal bg-card border border-border rounded-lg p-5 hover:border-primary/20 transition-all duration-300"
+              className="reveal bg-card border border-border rounded-lg p-5 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 cursor-pointer"
             >
               <h3 className="font-mono text-xs text-primary tracking-wider uppercase mb-4">
                 {cat.title}
@@ -69,7 +69,7 @@ export default function SkillsSection() {
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs text-secondary-foreground bg-secondary rounded px-2.5 py-1 hover:bg-primary/10 hover:text-primary transition-colors duration-200"
+                    className="text-xs text-secondary-foreground bg-secondary rounded px-2.5 py-1 hover:bg-primary/15 hover:text-primary transition-colors duration-200 cursor-pointer"
                   >
                     {skill}
                   </span>
